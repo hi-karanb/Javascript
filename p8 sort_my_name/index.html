@@ -1,5 +1,35 @@
 <html>
     <head>
         <title>Sort my Name</title>
+        <style>
+            *{ font-size: 30px;
+            font-family: Calibri;}
+            body{
+                background-color: cornflowerblue;
+            }
+        </style>
+        <script>
+            function sort(){
+                event.preventDefault()
+                let name = document.getElementById("name");
+                let ans = document.getElementById("ans");
+
+                let str = name.value.split("");
+                let str1 = str.sort();
+                let final_str = str1.join("");
+                ans.innerHTML = final_str;
+            }
+        </script>
     </head>
+    <body>
+        <center>
+            <h1>Sort My Name</h1>
+            <form onsubmit="sort()">
+               <input type="text" placeholder="Enter your name" id="name"/>
+               <br><br>
+               <input type="submit">
+            </form>
+            <h2 id="ans"></h2>
+        </center>
+    </body>
 </html>
