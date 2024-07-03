@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title> Color Me</title>
+        <style>
+            *{
+                font-size: 27px;
+                font-family: Calibri;
+            }
+        </style>
+        <script>
+            function color(){
+                event.preventDefault();
+                let colors = ["red","gray","lightblue","green"];
+                let r = parseInt(Math.random() * colors.length);
+                document.body.style.backgroundColor = colors[r];
+            }
+
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>Random Colors</h1>
+            <form onsubmit="color()">
+                <input type="submit"/>
+            </form>
+        </center>
+    </body>
+</html>

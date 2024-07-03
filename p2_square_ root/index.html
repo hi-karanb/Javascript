@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title> Square Root App</title>
+        <style>
+            *{
+                font-size: 27px;
+                font-family: Calibri;
+            }
+            body{
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <script>
+        function compute(){
+
+            event.preventDefault();
+            let num = document.getElementById("num");
+            let ans = document.getElementById("answer");
+
+            if(num.value==""){
+                alert("Please Enter num");
+                ans.innerHTML="";
+                num.focus();
+                return;
+
+            }
+            let n = parseFloat(num.value);
+            if(n<0){
+                alert("Please enter Positive Number");
+                ans.innerHTML="";
+                num.value="";
+                num.focus();
+                return;
+            }
+
+            let res=n**0.5;
+            ans.innerHTML = "Square Root of "+ n +" = "+res.toFixed(2);
+        }
+    </script>
+    <body>
+        <center>
+            <h1>Square Root App</h1>
+            <form onsubmit="compute()">
+                <input type="number" placeholder="Enter number" id="num">
+                <br><br>
+                <input type="submit">
+            </form>
+            <h2 id="answer"></h2>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Even or Odd</title>
+        <style>
+            *{
+                font-size: 30px;
+                font-family: Calibri;
+            }
+
+            body{
+                background-color: aqua;
+            }
+        </style>
+        <script>
+            function evenodd(){
+                event.preventDefault();
+                let num = document.getElementById("num");
+                let ans = document.getElementById("answer");
+            
+
+                let n = parseInt(num.value);
+
+                if(n%2 == 0){
+                    ans.innerHTML = "Number is even";
+
+                    
+                    
+                } else{
+                    ans.innerHTML = "Number is odd";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Even Odd</h1>
+        <form onsubmit="evenodd()">
+            <input type="text" placeholder="Enter num" id="num">
+            <br><br>
+            <input type="submit">
+        </form>
+        <h2 id="answer"></h2>
+        
+        
+    </body>
+</html>

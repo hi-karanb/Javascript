@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Palindrome</title>
+        <style>
+            *{
+                font-size: 30px;
+                font-family: Calibri;
+            }
+            body{
+                background-color: blanchedalmond;
+            }
+        </style>
+        <script>
+            function Palindrome(){
+                event.preventDefault();
+                let str = document.getElementById("string");
+                let ans = document.getElementById("ans");
+
+                let s1 = str.value.split("").reverse().join();
+                if(s1 == str.value){
+                    ans.innerHTML = "It is Palindrome";
+                } else {
+                    ans.innerHTML = "It is not Palindrome"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>Palindrome</h1>
+            <form onsubmit="Palindrome()">
+                <input type="text" placeholder="Enter String" id="string">
+                <br><br>
+                <input type="submit">
+            </form>
+            <h2 id="ans"></h2>
+        </center>
+    </body>
+</html>

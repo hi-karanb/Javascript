@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title> Welcome App</title>
+        <style>
+            *{
+                font-size: 40px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri;
+            }
+            body{
+                background-color: yellow;
+            }
+        </style>
+        <script>
+            function print(){
+                event.preventDefault();
+                let name=document.getElementById("name");
+                let message=document.getElementById("message");
+                let msg="";
+
+                if(name.value==""){
+                    alert("Please enter your name");
+                    message.innerHTML="";
+                    name.focus();
+                    return;
+                }
+
+                let d=new Date();
+                let hr=d.getHours();
+
+                if(hr<12){
+                    msg="Good morning "+name.value;
+                }
+                else if(hr<15){
+                    msg="Good Afternoon "+name.value;
+                }
+                else{
+                    msg="Good Evening "+name.value;
+                }
+                message.innerHTML=msg;
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>Welcome App</h1>
+            <form onsubmit="print()">
+            <input type="text" placeholder="Enter your name" id="name">
+            <br><br>
+            <input type="submit">
+        </form>
+        <h2 id="message"></h2>
+        </center>
+    </body>
+</html>

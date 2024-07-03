@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Temperature Converter</title>
+        <style>
+            *{
+                font-size: 30px;
+                font-family: Calibri;
+            }
+            body{
+                background-color: coral;
+            }
+        </style>
+        <script>
+            function convert(){
+                event.preventDefault();
+                let temp = document.getElementById("temp");
+                let ans = document.getElementById("ans");
+                if(temp.value == ""){
+                    alert("Please enter temperature");
+                    ans.innerHTML = "";
+                    temp.focus();
+                    return;
+                }
+                let c = parseFloat(temp.value);
+                let kelvin = c + 273;
+                ans.innerHTML = "Temperature in Kelvin = " + kelvin;
+
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>Temperature Converter</h1>
+            <form onsubmit="convert()">
+                <input type="text" placeholder="Enter the Temperature in celcius" id="temp">
+                <br><br>
+                <input type="submit"/>
+            </form>
+            <h2 id="ans"></h2>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+body{
+    background-color: aquamarine;
+    font-size: 30px;
+    font-family: Calibri;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin: 0;
+}
+
+.Calculator{
+    text-align: center;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+input[type="number"], button{
+    margin: 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+#result {
+    margin-top: 10px;
+    font-size: 18px;
+}
