@@ -12,7 +12,7 @@ body{
     padding-left: 100px;
     padding-right: 100px;
     border-radius: 20px;
-    background: linear-gradient(300deg,#0425fa),#1fa2ff,#a6ffcb;
+    background-color: rgba(0, 0, 0, 0.655);
     background-size: 180% 180%;
     animation: gradient-animation 18s ease infinite;
     opacity: 100%;
