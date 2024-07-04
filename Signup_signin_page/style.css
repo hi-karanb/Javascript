@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: coral;
+}
+
+.container{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 20px;
+    background: linear-gradient(300deg,#0425fa),#1fa2ff,#a6ffcb;
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+    opacity: 100%;
+}
+
+@keyframes gradient-animation{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+h1{
+    font-family: "Nunito", sans-serif;
+    color: #FFFFFF;
+    font-size: 50px;
+}
+
+label{
+    margin-top: 1px;
+    display: grid;
+    font-size: large;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+    color: white;
+}
+
+input {
+    margin-bottom: 2px;
+    display: grid;
+    height: 40px;
+    width: 260px;
+    font-family: "Nunito", sans-serif;
+    border-radius: 13px;
+    border: none;
+}
+
+button{
+    height: 40px;
+    width: 100px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    margin-left: 80px;
+    margin-top: 30px;
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+}
